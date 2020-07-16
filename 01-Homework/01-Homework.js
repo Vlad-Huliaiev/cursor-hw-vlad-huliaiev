@@ -17,39 +17,57 @@ let sum = form + bigBoxForm + averBoxForm;
 console.log(sum); //Складіть вартість всіх товарів, помістіть її в змінну та виведіть цю суму
 document.writeln("Сума всіх товарів: " + sum);
 
-let minSum = Math.floor(form) + Math.floor(bigBoxForm) + Math.floor(averBoxForm);
-console.log(minSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
-document.writeln("Ціла сума всіх товарів 1: " + minSum);
 
-let maxSum = Math.ceil(form) + Math.ceil(bigBoxForm) + Math.ceil(averBoxForm);
-console.log(maxSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
-document.writeln("Ціла сума всіх товарів 2: " + maxSum);
+let roundSum = Math.round(form) + Math.round(bigBoxForm) + Math.round(averBoxForm);
+console.log(roundSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
+document.writeln("Ціла сума всіх товарів: " + roundSum);
 
-let hundredRound1 = (Math.floor(minSum/100))*100;
-console.log(hundredRound1); //Виведіть суму товарів округлену до сотень.
-document.writeln("Округлення до сотень за допомогою floor: " + hundredRound1);
+let floorSum = Math.floor(form) + Math.floor(bigBoxForm) + Math.floor(averBoxForm);
+console.log(floorSum);
+document.writeln("Ціла сума всіх товарів 1: " + floorSum);
 
-let hundredRound2 = (Math.ceil(maxSum/100))*100;
-console.log(hundredRound2); //Виведіть суму товарів округлену до сотень.
-document.writeln("Округлення до сотень за допомогою ceil: " + hundredRound2);
+let ceilSum = Math.ceil(form) + Math.ceil(bigBoxForm) + Math.ceil(averBoxForm);
+console.log(ceilSum);
+document.writeln("Ціла сума всіх товарів 2: " + ceilSum);
 
-let evenOdd1 = null;
-if(minSum % 2 == 0){
-    evenOdd1 = true;
+let hundredRound = (Math.round(roundSum/100))*100;
+console.log(hundredRound); //Виведіть суму товарів округлену до сотень.
+document.writeln("Округлення до сотень за допомогою round: " + hundredRound);
+
+let hundredFloor = (Math.floor(floorSum/100))*100;
+console.log(hundredFloor);
+document.writeln("Округлення до сотень за допомогою floor: " + hundredFloor);
+
+let hundredCeil = (Math.ceil(ceilSum/100))*100;
+console.log(hundredCeil);
+document.writeln("Округлення до сотень за допомогою ceil: " + hundredCeil);
+
+let evenOddRound = null;
+if(roundSum % 2 == 0){
+    evenOddRound = true;
 }   else {
-evenOdd1 = false;
+evenOddRound = false;
 }
-console.log(evenOdd1);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
-document.writeln("Кратне 1: " + evenOdd1);
+console.log(evenOddRound);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
+document.writeln("Кратне (round): " + evenOddRound);
 
-let evenOdd2 = null;
-if(maxSum % 2 == 0){
-    evenOdd2 = true;
+let evenOddCeil = null;
+if(ceilSum % 2 == 0){
+    evenOddCeil = true;
 }   else {
-evenOdd2 = false;
+evenOddCeil = false;
 }
-console.log(evenOdd2);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
-document.writeln("Кратне 2: " + evenOdd2);
+console.log(evenOddCeil);
+document.writeln("Кратне (ceil): " + evenOddCeil);
+
+let evenOddFloor = null;
+if(floorSum % 2 == 0){
+    evenOddFloor = true;
+}   else {
+evenOddFloor = false;
+}
+console.log(evenOddFloor);
+document.writeln("Кратне (floor): " + evenOddFloor);
 
 const Cash = 500;
 let remainAmount = Cash - sum;
@@ -77,8 +95,9 @@ console.log(netProfit);
 document.writeln("Скидка: " + discount + "%");
 document.writeln("До оплати: " + sumDiscount);
 document.writeln("СЧистий прибуток: " + netProfit);
-/* Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random).
-  Зробіть клієнту випадкову знижку та виведіть суму до оплати округлену до 2 знаків після коми.
-  Виведіть чистий прибуток, якщо клієнт заплатив зі знижкою та собівартість товарів рівно в два рази нижче їх ціни?
+/*
+    Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random).
+    Зробіть клієнту випадкову знижку та виведіть суму до оплати округлену до 2 знаків після коми.
+    Виведіть чистий прибуток, якщо клієнт заплатив зі знижкою та собівартість товарів рівно в два рази нижче їх ціни?
 */
 
