@@ -1,32 +1,32 @@
 
-const form = 15.678;
-const bigBoxForm = 123.965;
-const averBoxForm = 90.2345;
+const FORM = 15.678;
+const BIG_BOX_FORM = 123.965;
+const AVER_BOX_FORM = 90.2345;
 
 document.write('<pre>');
 
-let max = Math.max(form, bigBoxForm, averBoxForm);
+let max = Math.max(FORM, BIG_BOX_FORM, AVER_BOX_FORM);
 console.log(max); //Використовуючи вбудований об'єкт Math – виведіть максимальне число
 document.writeln("Максимальне число: " + max);
 
-let min = Math.min(form, bigBoxForm, averBoxForm);
+let min = Math.min(FORM, BIG_BOX_FORM, AVER_BOX_FORM);
 console.log(min); //Використовуючи вбудований об'єкт Math – виведіть мінімальне число
 document.writeln("Мінімальне число: " + min);
 
-let sum = form + bigBoxForm + averBoxForm;
+let sum = FORM + BIG_BOX_FORM + AVER_BOX_FORM;
 console.log(sum); //Складіть вартість всіх товарів, помістіть її в змінну та виведіть цю суму
 document.writeln("Сума всіх товарів: " + sum);
 
 
-let roundSum = Math.round(form) + Math.round(bigBoxForm) + Math.round(averBoxForm);
+let roundSum = Math.round(FORM) + Math.round(BIG_BOX_FORM) + Math.round(AVER_BOX_FORM);
 console.log(roundSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
 document.writeln("Ціла сума всіх товарів (round): " + roundSum);
 
-let floorSum = Math.floor(form) + Math.floor(bigBoxForm) + Math.floor(averBoxForm);
+let floorSum = Math.floor(FORM) + Math.floor(BIG_BOX_FORM) + Math.floor(AVER_BOX_FORM);
 console.log(floorSum);
 document.writeln("Ціла сума всіх товарів (floor): " + floorSum);
 
-let ceilSum = Math.ceil(form) + Math.ceil(bigBoxForm) + Math.ceil(averBoxForm);
+let ceilSum = Math.ceil(FORM) + Math.ceil(BIG_BOX_FORM) + Math.ceil(AVER_BOX_FORM);
 console.log(ceilSum);
 document.writeln("Ціла сума всіх товарів (ceil): " + ceilSum);
 
@@ -74,7 +74,7 @@ let remainAmount = Cash - sum;
 console.log(remainAmount); //Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
 document.writeln("Решта: " + remainAmount);
 
-let averageSum1 = Math.round(((Math.round(form*100)/100 + Math.round(bigBoxForm*100)/100 + Math.round(averBoxForm*100)/100)/3)*100)/100;
+let averageSum1 = Math.round(((Math.round(FORM*100)/100 + Math.round(BIG_BOX_FORM*100)/100 + Math.round(AVER_BOX_FORM*100)/100)/3)*100)/100;
 let averageSum2 = Math.round((sum/3)*100)/100;
 console.log(averageSum1);
 console.log(averageSum2);   //Виведіть середнє значення цін, округлене до другого знаку після коми.
@@ -94,7 +94,7 @@ console.log(sumDiscount);
 console.log(netProfit);
 document.writeln("Скидка: " + discount + "%");
 document.writeln("До оплати: " + sumDiscount);
-document.writeln("СЧистий прибуток: " + netProfit);
+document.writeln("Чистий прибуток: " + netProfit);
 /*
     Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random).
     Зробіть клієнту випадкову знижку та виведіть суму до оплати округлену до 2 знаків після коми.
