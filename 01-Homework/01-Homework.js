@@ -20,15 +20,15 @@ document.writeln("Сума всіх товарів: " + sum);
 
 let roundSum = Math.round(form) + Math.round(bigBoxForm) + Math.round(averBoxForm);
 console.log(roundSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
-document.writeln("Ціла сума всіх товарів: " + roundSum);
+document.writeln("Ціла сума всіх товарів (round): " + roundSum);
 
 let floorSum = Math.floor(form) + Math.floor(bigBoxForm) + Math.floor(averBoxForm);
 console.log(floorSum);
-document.writeln("Ціла сума всіх товарів 1: " + floorSum);
+document.writeln("Ціла сума всіх товарів (floor): " + floorSum);
 
 let ceilSum = Math.ceil(form) + Math.ceil(bigBoxForm) + Math.ceil(averBoxForm);
 console.log(ceilSum);
-document.writeln("Ціла сума всіх товарів 2: " + ceilSum);
+document.writeln("Ціла сума всіх товарів (ceil): " + ceilSum);
 
 let hundredRound = (Math.round(roundSum/100))*100;
 console.log(hundredRound); //Виведіть суму товарів округлену до сотень.
@@ -51,15 +51,6 @@ evenOddRound = false;
 console.log(evenOddRound);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
 document.writeln("Кратне (round): " + evenOddRound);
 
-let evenOddCeil = null;
-if(ceilSum % 2 == 0){
-    evenOddCeil = true;
-}   else {
-evenOddCeil = false;
-}
-console.log(evenOddCeil);
-document.writeln("Кратне (ceil): " + evenOddCeil);
-
 let evenOddFloor = null;
 if(floorSum % 2 == 0){
     evenOddFloor = true;
@@ -68,6 +59,15 @@ evenOddFloor = false;
 }
 console.log(evenOddFloor);
 document.writeln("Кратне (floor): " + evenOddFloor);
+
+let evenOddCeil = null;
+if(ceilSum % 2 == 0){
+    evenOddCeil = true;
+}   else {
+evenOddCeil = false;
+}
+console.log(evenOddCeil);
+document.writeln("Кратне (ceil): " + evenOddCeil);
 
 const Cash = 500;
 let remainAmount = Cash - sum;
