@@ -27,11 +27,11 @@ document.writeln("Ціла сума всіх товарів 2: " + maxSum);
 
 let hundredRound1 = (Math.floor(minSum/100))*100;
 console.log(hundredRound1); //Виведіть суму товарів округлену до сотень.
-document.writeln("Округлення до сотень 1: " + hundredRound1);
+document.writeln("Округлення до сотень за допомогою floor: " + hundredRound1);
 
 let hundredRound2 = (Math.ceil(maxSum/100))*100;
 console.log(hundredRound2); //Виведіть суму товарів округлену до сотень.
-document.writeln("Округлення до сотень 2: " + hundredRound2);
+document.writeln("Округлення до сотень за допомогою ceil: " + hundredRound2);
 
 let evenOdd1 = null;
 if(minSum % 2 == 0){
