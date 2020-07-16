@@ -19,20 +19,37 @@ document.writeln("Сума всіх товарів: " + sum);
 
 let minSum = Math.floor(form) + Math.floor(bigBoxForm) + Math.floor(averBoxForm);
 console.log(minSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
-document.writeln("Ціла сума всіх товарів: " + minSum);
+document.writeln("Ціла сума всіх товарів 1: " + minSum);
 
-let hundredRound = (Math.floor(minSum/100))*100;
-console.log(hundredRound); //Виведіть суму товарів округлену до сотень.
-document.writeln("Округлення до сотень: " + hundredRound);
+let maxSum = Math.ceil(form) + Math.ceil(bigBoxForm) + Math.ceil(averBoxForm);
+console.log(maxSum); //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою.
+document.writeln("Ціла сума всіх товарів 2: " + maxSum);
 
-let evenOdd = null;
+let hundredRound1 = (Math.floor(minSum/100))*100;
+console.log(hundredRound1); //Виведіть суму товарів округлену до сотень.
+document.writeln("Округлення до сотень 1: " + hundredRound1);
+
+let hundredRound2 = (Math.ceil(maxSum/100))*100;
+console.log(hundredRound2); //Виведіть суму товарів округлену до сотень.
+document.writeln("Округлення до сотень 2: " + hundredRound2);
+
+let evenOdd1 = null;
 if(minSum % 2 == 0){
-    evenOdd = true;
+    evenOdd1 = true;
 }   else {
-evenOdd = false;
+evenOdd1 = false;
 }
-console.log(evenOdd);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
-document.writeln("Кратне: " + evenOdd);
+console.log(evenOdd1);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
+document.writeln("Кратне 1: " + evenOdd1);
+
+let evenOdd2 = null;
+if(maxSum % 2 == 0){
+    evenOdd2 = true;
+}   else {
+evenOdd2 = false;
+}
+console.log(evenOdd2);// Виведіть булеве значення: чи є сума всіх товарів парним чи непарним числом?
+document.writeln("Кратне 2: " + evenOdd2);
 
 const Cash = 500;
 let remainAmount = Cash - sum;
