@@ -3,12 +3,11 @@ document.write('<pre>');
 
 let FIRST_NUMBER = prompt("Input first number.");
 let SECOND_NUMBER = prompt("Input second number.");
-
 let first = parseFloat(FIRST_NUMBER, 10);
 let second = parseFloat(SECOND_NUMBER, 10);
 
 const n = parseInt(FIRST_NUMBER, 10);
-if(isNaN(n)){
+if(Number.isNaN(n)){
     console.log("That not number");
     document.writeln("That not number");
 } else {
@@ -27,7 +26,7 @@ if(first % 1 == 0){
 
 
 const m = parseInt(SECOND_NUMBER, 10);
-if(isNaN(m)){
+if(Number.isNaN(m)){
     console.log("That not number");
     document.writeln("That not number");
 } else {
@@ -49,11 +48,9 @@ const skipEvenNumbers = confirm('Whether to skip even numbers?');
 if(skipEvenNumbers == true) {
     console.log('We must will skip even numbers!');
     document.writeln('We are the skip even numbers!');
-    alert('So we will skip even numbers!');
 } else {
     console.log('We do not miss even numbers!');
     document.writeln('Ok, we use all numbers!');
-    alert('Ok, so we do not will skip even numbers!');
 }   //Отримайте у користувача булевий параметр(true/false), який підкаже нам чи потрібно пропускати парні числа.
 
 
@@ -72,7 +69,7 @@ if(n < m){
         console.log(sum);
     }
     document.writeln('Sum: ' + sum);
-    
+
 } else if(n > m){
     let sum = 0;
         for(let i = m; i <= n; i++){
