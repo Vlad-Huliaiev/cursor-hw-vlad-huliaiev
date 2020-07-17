@@ -2,44 +2,24 @@
 document.write('<pre>');
 
 for(let attempts = 0; attempts < 4; attempts++){
-    let FIRST_NUMBER = prompt("Input first number.");
-    let SECOND_NUMBER = prompt("Input second number.");
+    let FIRST_NUMBER = +(prompt('Input first number.', ''));
+    let SECOND_NUMBER = +(prompt('Input second number.', ''));
+
         if(isNaN(FIRST_NUMBER) && isNaN(SECOND_NUMBER)){
             alert('We do not have number, input again!');
-            console.log('not')
+        } else if(FIRST_NUMBER % 1 != 0 && SECOND_NUMBER % 1 != 0){ //Перевірте, чи є передане значення (N,M) ЦІЛИМ числом.
+            alert('We do not have integer number, input again!');
         } else if(isNaN(FIRST_NUMBER)){
             alert('Your sum = ' + SECOND_NUMBER)
         } else if(isNaN(SECOND_NUMBER)){
             alert('Your sum = ' + FIRST_NUMBER)
         } else {    const n = parseInt(FIRST_NUMBER, 10);
-                    console.log("Your number: " + FIRST_NUMBER);
-                    document.writeln("Your number: " + FIRST_NUMBER);
-                    //Отримайте у користувача число(N) від якого ми будемо складати.
-
-
-                    if(FIRST_NUMBER % 1 == 0){
-                        console.log("Your number is an integer.");
-                        document.writeln("Your number is an integer.");
-                    } else {
-                        console.log("Your number is not an integer.");
-                        document.writeln("Your number is not an integer.");
-                    }   //Перевірте, чи є передане значення (N) ЦІЛИМ числом.
-
-
                     const m = parseInt(SECOND_NUMBER, 10);
-                    console.log("Your number: " + SECOND_NUMBER);
-                    document.writeln("Your number: " + SECOND_NUMBER);
-                    //Отримайте у користувача число(M) від якого ми будемо складати.
-
-
-                    if(SECOND_NUMBER % 1 == 0){
-                        console.log("Your number is an integer.");
-                        document.writeln("Your number is an integer.");
-                    } else {
-                        console.log("Your number is not an integer.");
-                        document.writeln("Your number is not an integer.");
-                    }   //Перевірте, чи є передане значення M ЦІЛИМ числом.
-
+                    console.log("Your number: " + n);
+                    document.writeln("Your number: " + n);
+                    console.log("Your number: " + m);
+                    document.writeln("Your number: " + m);
+                    //Отримайте у користувача число (N,M) від якого ми будемо складати.
 
                     const skipEvenNumbers = confirm('Whether to skip even numbers?');
                     if(skipEvenNumbers == true) {
@@ -82,7 +62,7 @@ for(let attempts = 0; attempts < 4; attempts++){
                             document.writeln('Sum: ' + sum);
 
                     } else if(n == m) {
-                        for(let i = m; i <= n; i++){
+                        for(let i = n; i <= m; i++){
                             if(skipEvenNumbers == false){
                                 let sum = 0;
                                 sum = n + m;
@@ -95,7 +75,7 @@ for(let attempts = 0; attempts < 4; attempts++){
                                     document.writeln('Sum: ' + sum);
                                 }
                                 if(n + m == 0){
-                                    document.writeln('We ignored even numbers! So sum is: ' + sum);
+                                    document.writeln('You sum is: ' + 0);
                                 }
 
                             }
@@ -103,7 +83,6 @@ for(let attempts = 0; attempts < 4; attempts++){
                         }
 
                     }
-
                     break;
                 }
 
