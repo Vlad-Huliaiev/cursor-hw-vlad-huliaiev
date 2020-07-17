@@ -4,16 +4,20 @@ document.write('<pre>');
 let FIRST_NUMBER = prompt("Input first number.");
 let SECOND_NUMBER = prompt("Input second number.");
 
+let first = parseFloat(FIRST_NUMBER, 10);
+let second = parseFloat(SECOND_NUMBER, 10);
+
 const n = parseInt(FIRST_NUMBER, 10);
 if(isNaN(n)){
     console.log("That not number");
     document.writeln("That not number");
 } else {
-    console.log("Your number: " + n);
-    document.writeln("Your number: " + n);
+    console.log("Your number: " + first);
+    document.writeln("Your number: " + first);
 }   //Отримайте у користувача число(N) від якого ми будемо складати.
 
-if(n % 1 == 0){
+
+if(first % 1 == 0){
     console.log("Your number is an integer.");
     document.writeln("Your number is an integer.");
 } else {
@@ -27,11 +31,12 @@ if(isNaN(m)){
     console.log("That not number");
     document.writeln("That not number");
 } else {
-    console.log("Your number: " + m);
-    document.writeln("Your number: " + m);
+    console.log("Your number: " + second);
+    document.writeln("Your number: " + second);
 }   //Отримайте у користувача число(M) від якого ми будемо складати.
 
-if(m % 1 == 0){
+
+if(second % 1 == 0){
     console.log("Your number is an integer.");
     document.writeln("Your number is an integer.");
 } else {
@@ -51,6 +56,7 @@ if(skipEvenNumbers == true) {
     alert('Ok, so we do not will skip even numbers!');
 }   //Отримайте у користувача булевий параметр(true/false), який підкаже нам чи потрібно пропускати парні числа.
 
+
 if(n < m){
     let sum = 0;
     for(let i = n; i <= m; i++){
@@ -63,9 +69,10 @@ if(n < m){
             }
 
         }
+        console.log(sum);
     }
     document.writeln('Sum: ' + sum);
-
+    
 } else if(n > m){
     let sum = 0;
         for(let i = m; i <= n; i++){
@@ -73,29 +80,32 @@ if(n < m){
                 sum += i;
             }
             if(skipEvenNumbers == true){
-                if(i % 2 != 0){
+                if(i % 2 != 0){ //пропускає парні числа
                 sum += i;
                 }
             }
         }
         document.writeln('Sum: ' + sum);
+
 } else if(n == m) {
-    if(skipEvenNumbers == false){
-        let sum = 0;
-        sum = n + m;
-        document.writeln('Sum: ' + sum);
-    }
-    if(skipEvenNumbers == true) {
-        let sum = 0;
-        sum = 0;
-        document.writeln('We ignored even numbers! So sum is: ' + sum);
+    for(let i = m; i <= n; i++){
+        if(skipEvenNumbers == false){
+            let sum = 0;
+            sum = n + m;
+            document.writeln('Sum: ' + sum);
+        }
+        if(skipEvenNumbers == true) {
+            if(i % 2 != 0){ //пропускає парні числа
+                let sum = 0;
+                sum = n + m;
+                document.writeln('Sum: ' + sum);
+            }
+            if(n + m == 0){
+                document.writeln('We ignored even numbers! So sum is: ' + sum);
+            }
+
+        }
+
     }
 
 }
-
-
-/*
- if(i % 2 == 0){ // пропускає не парні числа
-                sum += i;
-            }
-            */
