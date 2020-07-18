@@ -1,7 +1,6 @@
 
 document.write('<pre>');
 
-alert('Enter only integer numbers.');
 for(let attempts = 0; attempts < 10; attempts++){
     let first = +(prompt('Input first number.', ''));
     let second = +(prompt('Input second number.', ''));
