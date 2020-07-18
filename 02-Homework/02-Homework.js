@@ -10,9 +10,11 @@ for(let attempts = 0; attempts < 10; attempts++){
         } else if(first % 1 != 0 && second % 1 != 0){
             alert('Only integers are accepted!');
         } else if(isNaN(first) || first % 1 != 0){
-            alert('Only integers are accepted!')
+            alert('Only integers are accepted!');
         } else if(isNaN(second) || second % 1 != 0){
-            alert('Only integers are accepted!')
+            alert('Only integers are accepted!');
+        } else if(first > second){
+                      alert('The second integers must be greater than the first');
         } else {    const n = parseInt(first, 10);
                     const m = parseInt(second, 10);
                     document.writeln("Your number first: " + first);
@@ -45,23 +47,6 @@ for(let attempts = 0; attempts < 10; attempts++){
                         }
                         console.log(sum);
                         document.writeln('Sum: ' + sum);
-
-                    } else if(n > m){
-                        let sum = 0;
-                            for(let i = m; i <= n; i++){
-                                if(skipEvenNumbers == false){
-                                    sum += i;
-                                }
-                                if(skipEvenNumbers == true){
-                                    if(i % 2 != 0){ //пропускає парні числа
-                                    sum += i;
-                                    }
-
-                                }
-
-                            }
-                            document.writeln('Sum: ' + sum);
-
                     } else if(n == m) {
                         for(let i = n; i <= m; i++){
                             if(skipEvenNumbers == false){
