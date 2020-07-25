@@ -7,7 +7,7 @@ function getMaxDigit() { //Створити функцію getMaxDigit(number) �
     }
     return max;
 }
-let number = +(prompt('Введіть число для пошуку найбільшого.', ''));
+let number = +(prompt('Введіть число для пошуку найбільшого в ньому.', ''));
 let max = 0;
 const maxDigit = getMaxDigit();
 console.log(maxDigit);
