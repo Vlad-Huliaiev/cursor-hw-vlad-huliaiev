@@ -27,7 +27,7 @@ console.log('Результа "a" в ступіні "b": ' + degreeDetermines);
 function capitalizeFirstLetter(string) { //Створити функцію, яка форматує ім'я, роблячи першу букву великою
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-let word = prompt('Введіть ім`я.', '').toLowerCase();
+let word = prompt('Введіть ім`я(у довільному регістрі).', '').toLowerCase();
 console.log(capitalizeFirstLetter(word));
 
 function amountAfterTaxes() { //Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати.
@@ -40,8 +40,8 @@ console.log('Ваша зарплатня за вичитом податків: '
 function getRandomInteger(min, max) { //Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
 return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-let c = +(prompt('Введіть початок діапазону.', ''));
-let d = +(prompt('Введіть кінець діапазону.', ''));
+let c = +(prompt('Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Введіть початок діапазону(меньше за наступне).', ''));
+let d = +(prompt('Введіть кінець діапазону(більше за попередне).', ''));
 const randomInteger = getRandomInteger(c, d);
 console.log('Ваше випадкове число: ' + randomInteger);
 
@@ -58,7 +58,7 @@ var strLen = strMas.length;
     }
     return c;
 }
-let str = prompt('Введіть текст.', '').toLowerCase();
+let str = prompt('Введіть текст для перевірки чи є воно паліндромом.', '').toLowerCase();
 str = str.replace(/\s+/g, '');
 const strMas = str.split('');
 console.log(isPalindrome(strMas));
