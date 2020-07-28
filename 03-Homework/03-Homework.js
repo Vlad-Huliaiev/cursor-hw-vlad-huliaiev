@@ -11,7 +11,7 @@ function getMaxDigit() {
 
 // 2. Створити функцію, яка визначає ступінь числа.
 function getDeterminesDegree() {
-for(let i = 1; i <= b; i++){
+    for(let i = 1; i <= b; i++){
         s *= a;
     }
     return s;
@@ -24,12 +24,12 @@ function capitalizeFirstLetter(string) {
 
 // 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати.
 function amountAfterTaxes() {
-return parseInt(salary * ((100 - 19.5) / 100));
+    return parseInt(salary * ((100 - 19.5) / 100));
 }
 
 // 5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
 function getRandomInteger(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // 10. Створіть функцію, яка перевіряє, чи є слово паліндромом.
