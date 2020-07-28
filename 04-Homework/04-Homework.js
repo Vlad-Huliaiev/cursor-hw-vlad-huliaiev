@@ -5,13 +5,15 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
-const arrPairs = [[], [], []];
+const arr = [[], [], []];
+const arr2 = [[], [], [], [], [], []];
 
 // 1. Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом.
+const arrPairs = JSON.parse(JSON.stringify(arr));
 function getStudentsPairs(arrPairs) {
-    arrPairs[0].push(students[2],students[0]);
-    arrPairs[1].push(students[1],students[3]);
-    arrPairs[2].push(students[4],students[5]);
+    arrPairs[0].push(students[2] + " і " + students[0]);
+    arrPairs[1].push(students[1] + " і " + students[3]);
+    arrPairs[2].push(students[4] + " і " + students[5]);
     return arrPairs;
 }
 const studentsPairs = getStudentsPairs(arrPairs);
@@ -29,21 +31,21 @@ const studentsThemes = getStudentsThemes(arrThemes);
 
 
 // 3. Зіставте оцінки(marks) зі студентом(students):
-function getStudentsMarks() {
-    const arrMarks = [[]];
-    for(let i = 0; i < students.length; i++){
-        arrMarks[i] = students[i] + " , " + marks[i];
+const arrMarks = JSON.parse(JSON.stringify(arr2));
+function getStudentsMarks(arrMarks) {
+    for(let i = 0; i < arrMarks.length; i++){
+        arrMarks[i].push(students[i], marks[i]);
     }
     return arrMarks;
 }
-const studentsMarks = getStudentsMarks();
+const studentsMarks = getStudentsMarks(arrMarks);
 
 
 // 4. Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт.
 const arrPairsMarks = JSON.parse(JSON.stringify(arrThemes));
 function getStudentsPairsMarks(arrPairsMarks){
     for(let i = 0; i < arrPairsMarks.length; i++){
-    arrPairsMarks[i] = arrPairsMarks[i] + " - " + (Math.floor(Math.random() * 5) + 1);
+        arrPairsMarks[i].push(Math.floor(Math.random() * 5) + 1);
     }
     return arrPairsMarks;
 }
