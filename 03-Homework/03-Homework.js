@@ -1,13 +1,20 @@
 document.write('<pre>');
 
+function rand(b) {
+    var a = (new Date).getMilliseconds();
+    a = (25173 * a + 13849) % 65536;
+            return a % b + 1
+}
 // 1. Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.
 function getMaxDigit() {
+
     while(number > 0) {
         max = parseInt(Math.max(max, number % 10));
         number /= 10;
     }
     return max;
 }
+
 
 // 2. Створити функцію, яка визначає ступінь числа.
 function getDeterminesDegree() {
@@ -49,7 +56,7 @@ var strLen = strMas.length;
 
 
 // 1. Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.
-let number = +(prompt('Введіть число для пошуку найбільшого в ньому.', ''));
+let number = rand(100000); //+(prompt('Введіть число для пошуку найбільшого в ньому.', ''));
 const A = parseInt(number);
 let max = 0;
 const maxDigit = getMaxDigit();
