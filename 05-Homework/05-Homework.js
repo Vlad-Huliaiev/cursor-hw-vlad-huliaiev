@@ -40,6 +40,7 @@ function getMedian(arr) {
     return middle / 2;
 }
 
+/*
 // 2. Створіть функцію getMode(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
 function getMode(arr) {
     let modeArray = JSON.parse(JSON.stringify(arr));
@@ -69,7 +70,7 @@ function getMode(arr) {
         }
     return noModeTrue ? noMode : result;
 }
-
+*/
 
 // 5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
 function filterEvenNumbers(arr) {
@@ -119,10 +120,11 @@ const arrMedian = JSON.parse(JSON.stringify(randomArray));
 console.log('Відсортований масив: ' + arrMedian.sort((a, b) => a - b )); //
 console.log('Медіана масиву: ' + median);
 
-// 2. Створіть функцію getMode(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
+/*// 2. Створіть функцію getMode(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
 const mode = getMode(randomArray);
 console.log('Мода масиву:');
 console.log(mode);
+*/
 
 // 5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції.
 const filterArr = filterEvenNumbers(randomArray);
@@ -146,8 +148,8 @@ ${'Завдання 3 - Створіть функцію – яка рахує с
 ${'Середня сума масиву: ' + Math.floor(averageSum * 100) / 100}<br>
 ${'Завдання 4 - Створіть функцію – яка рахує медіану всіх переданих в неї аргументів:'}
 ${'Медіана масиву: ' + median}<br>
-${'Завдання 2 - Створіть функцію – яка вираховує моду всіх переданих в неї аргументів:'}
-${'Мода масиву: ' + mode}<br>
+/* ${'Завдання 2 - Створіть функцію – яка вираховує моду всіх переданих в неї аргументів:'}
+${'Мода масиву: ' + mode}<br> */
 ${'Завдання 5 - Створіть функцію – яка фільтрує парні числа передані як аргументи функції:'}
 ${'Фільтрує парні числа: ' + filterArr}<br>
 ${'Завдання 6 - Створіть функцію – яка порахує кількість чисел більших 0:'}
