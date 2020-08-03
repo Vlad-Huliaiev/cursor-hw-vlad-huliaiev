@@ -5,15 +5,23 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
-const arr = [[], [], []];
-const arr2 = [[], [], [], [], [], []];
+function create2DArray(rows) {
+  let arr = [];
+  for (let i = 0; i < rows; i++) {
+     arr[i] = [];
+  }
+  return arr;
+}
+const arr = create2DArray(3);
+const arr2 = create2DArray(6);
+
 
 // 1. Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом.
 const arrPairs = JSON.parse(JSON.stringify(arr));
 function getStudentsPairs(arrPairs) {
-    arrPairs[0].push(students[2] + " і " + students[0]);
-    arrPairs[1].push(students[1] + " і " + students[3]);
-    arrPairs[2].push(students[4] + " і " + students[5]);
+    for(let i = 0; i < arrPairs.length; i++){
+        arrPairs[i].push(students[i] + " і " + students[i]);
+    }
     return arrPairs;
 }
 const studentsPairs = getStudentsPairs(arrPairs);
@@ -22,9 +30,9 @@ const studentsPairs = getStudentsPairs(arrPairs);
 // 2. Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати.
 const arrThemes = JSON.parse(JSON.stringify(studentsPairs));
 function getStudentsThemes(arrThemes) {
-    arrThemes[0].push(themes[1]);
-    arrThemes[1].push(themes[2]);
-    arrThemes[2].push(themes[0]);
+    for(let i = 0; i < arrThemes.length; i++){
+        arrThemes[i].push(themes[i]);
+    }
     return arrThemes;
 }
 const studentsThemes = getStudentsThemes(arrThemes);
