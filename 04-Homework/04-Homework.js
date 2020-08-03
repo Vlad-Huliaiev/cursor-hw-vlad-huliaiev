@@ -12,72 +12,73 @@ function create2DArray(rows) {
   }
   return arr;
 }
-const arr = create2DArray(3);
-const arr2 = create2DArray(6);
-
 
 // 1. Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом.
-const arrPairs = JSON.parse(JSON.stringify(arr));
-function getStudentsPairs(arrPairs) {
-    for(let i = 0; i < arrPairs.length; i++){
-        arrPairs[i].push(students[i] + " і " + students[i]);
+function getStudentsPairs() {
+    let arrPairs = [];
+    for(let i = 0; i < students.length / 2; i++){
+        arrPairs[i] = students[i] + " і " + students[i + (length / 2)];
     }
     return arrPairs;
 }
-const studentsPairs = getStudentsPairs(arrPairs);
-
+const studentsPairs = getStudentsPairs();
 
 // 2. Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати.
-const arrThemes = JSON.parse(JSON.stringify(studentsPairs));
-function getStudentsThemes(arrThemes) {
+function getStudentsThemes() {
+    let arrThemes = create2DArray(students.length / 2);
     for(let i = 0; i < arrThemes.length; i++){
-        arrThemes[i].push(themes[i]);
+            arrThemes[i][0] = studentsPairs[i];
+            arrThemes[i][1] = themes[i];
     }
     return arrThemes;
 }
-const studentsThemes = getStudentsThemes(arrThemes);
-
+const studentsThemes = getStudentsThemes();
 
 // 3. Зіставте оцінки(marks) зі студентом(students):
-const arrMarks = JSON.parse(JSON.stringify(arr2));
-function getStudentsMarks(arrMarks) {
+function getStudentsMarks() {
+    let arrMarks = create2DArray(students.length);
     for(let i = 0; i < arrMarks.length; i++){
-        arrMarks[i].push(students[i], marks[i]);
+        arrMarks[i][0] = students[i]
+        arrMarks[i][1] = marks[i];
     }
     return arrMarks;
 }
-const studentsMarks = getStudentsMarks(arrMarks);
-
+const studentsMarks = getStudentsMarks();
 
 // 4. Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт.
-const arrPairsMarks = JSON.parse(JSON.stringify(arrThemes));
-function getStudentsPairsMarks(arrPairsMarks){
-    for(let i = 0; i < arrPairsMarks.length; i++){
-        arrPairsMarks[i].push(Math.floor(Math.random() * 5) + 1);
+function getStudentsPairsMarks(){
+    let arrPairsMarks = create2DArray(students.length / 2);
+    for(let i = 0; i < studentsThemes.length; i++){
+        arrPairsMarks[i][0] = studentsPairs[i];
+        arrPairsMarks[i][1] = themes[i];
+        arrPairsMarks[i][2] = (Math.floor(Math.random() * 5) + 1);
     }
     return arrPairsMarks;
 }
-const pairsMarks = getStudentsPairsMarks(arrPairsMarks);
+const pairsMarks = getStudentsPairsMarks();
 
 
-
-console.log(studentsPairs);
-console.log(studentsThemes);
-console.log(studentsMarks);
-console.log(pairsMarks);
+console.log(getStudentsPairs());
+console.log(getStudentsThemes());
+console.log(getStudentsMarks());
+console.log(getStudentsPairsMarks());
 document.writeln(`
+<b>1. Розділіть студентів на пари:</b>
 ${studentsPairs[0]}
 ${studentsPairs[1]}
 ${studentsPairs[2]}<br>
+<b>2. Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати:</b>
 ${studentsThemes[0]}
 ${studentsThemes[1]}
 ${studentsThemes[2]}<br>
+<b>3. Зіставте оцінки(marks) зі студентом(students):</b>
 ${studentsMarks[0]}
 ${studentsMarks[1]}
 ${studentsMarks[2]}
 ${studentsMarks[3]}
 ${studentsMarks[4]}
 ${studentsMarks[5]}<br>
+<b>4. Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт:</b>
 ${pairsMarks[0]}
 ${pairsMarks[1]}
 ${pairsMarks[2]}<br>`)
