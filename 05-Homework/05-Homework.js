@@ -101,12 +101,9 @@ function getDividedByFive(arr) {
 
 
 // 1. Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел.
-let length = 11;
-let min = 1;
-let max = 10;
-//let length = +prompt('Введіть довжину масиву: ');
-//let min = +prompt('Введіть початок діапазону(меньше за наступне).', '');
-//let max = +prompt('Введіть кінець діапазону(більше за попередне).', '');
+let length = +prompt('Введіть довжину масиву: ');
+let min = +prompt('Введіть початок діапазону(меньше за наступне).', '');
+let max = +prompt('Введіть кінець діапазону(більше за попередне).', '');
 const randomArray = getRandomArray(length, min, max);
 console.log('Масив із випадковими числами: ' + randomArray);
 
