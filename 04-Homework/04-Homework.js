@@ -17,7 +17,7 @@ function create2DArray(rows) {
 function getStudentsPairs() {
     let arrPairs = [];
     for(let i = 0; i < students.length / 2; i++){
-        arrPairs[i] = students[i] + " і " + students[i + (length / 2)];
+        arrPairs[i] = students[i] + " і " + students[i + 3];
     }
     return arrPairs;
 }
