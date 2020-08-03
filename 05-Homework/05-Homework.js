@@ -129,7 +129,7 @@ console.log(filterArr);
 
 // 6. Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
 const negativeRandomArray = getRandomArray(length, -10, 10);
-console.log('Масив із випадковими від`ємними та натуральними числами: ' + negativeRandomArray);
+console.log('Масив із випадковими від`ємними значеннями: ' + negativeRandomArray);
 const positive = countPositiveNumbers(negativeRandomArray);
 console.log(positive);
 
@@ -148,6 +148,7 @@ ${'Медіана масиву: ' + median}<br>
 ${'Завдання 5 - Створіть функцію – яка фільтрує парні числа передані як аргументи функції:'}
 ${'Фільтрує парні числа: ' + filterArr}<br>
 ${'Завдання 6 - Створіть функцію – яка порахує кількість чисел більших 0:'}
+${'Масив з від`ємними значеннями: ' + negativeRandomArray}
 ${'Фільтрує парні числа: ' + positive}<br>
 ${'Завдання 7 - Створіть функцію – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5:'}
 ${'Фільтрує парні числа: ' + dividedByFive}<br>
