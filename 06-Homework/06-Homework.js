@@ -1,4 +1,3 @@
-
 document.write('<pre>');
 
 const students = [{
@@ -33,14 +32,14 @@ const getSubjects = id => Object.keys(students[id].subjects).map(a => a[0].toUpp
 
 
 // 2. Створіть функцію – яка поверне середню оцінку по усім предметам для переданого студента.
-
 function getAverageMark(id) {
-    arr = Object.values(students[id].subjects);
-    array = (arr[0].concat(arr[1], arr[2]));
-    var sum = 0;
-    for(var i = 0; i < array.length; i++){
-        sum += array[i];
-    }
+    let  array = [];
+    let arr = Object.values(students[id].subjects);
+    array = arr[0].concat(arr[1], arr[2]);
+    let sum = 0;
+        for(let i = 0; i < array.length; i++){
+            sum += array[i];
+        }
     averageSum = sum / array.length;
     return averageSum.toFixed(2);
 }
@@ -59,16 +58,33 @@ function getStudentInfo(id) {
 // 4. Ствроіть функцію – яка повертає імена студентів у алфавітному порядку.
 studentsNames = JSON.parse(JSON.stringify(students));
 studentsNames.sort(function(a,b){
-   var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase();
-   if (nameA < nameB)
-     return -1;
-   if (nameA > nameB)
-     return 1;
-   return 0;
+    var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase();
+    if (nameA < nameB)
+        return -1;
+    if (nameA > nameB)
+        return 1;
+    return 0;
  });
 
 
 // 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
+function getBestStudent() {
+    let arrBest = [];
+    let max = 0;
+    for (let i = 0; i < students.length; i++) {
+        arrBest.push(+getAverageMark(i));
+    }
+    max = arrBest.reduce((a, b) => a > b ? a : b);
+    if(max == getAverageMark(0)){
+        bestStudentsName = 'Tanya';
+    } else if(max == getAverageMark(1)){
+        bestStudentsName = 'Victor';
+    } else if(max == getAverageMark(2)){
+        bestStudentsName = 'Anton';
+    }
+    return bestStudentsName;
+}
+
 
 // 6. Створіть функцію – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 function calculateWordLetters(word) {
@@ -76,12 +92,25 @@ function calculateWordLetters(word) {
         word.split('').map(a =>(result[a] = !result[a] ? 1 : result[a] + 1));
    return result;
 }
+
+
+// 1. Створіть функцію - яка повертає список предметів для конкретного студента.
 console.log('Список предметів студента ' + students[0].name + ': ' + getSubjects(0));
+
+// 2. Створіть функцію – яка поверне середню оцінку по усім предметам для переданого студента.
 console.log('Середня сума: ' + getAverageMark(0));
+
+// 3. Створіть функцію – яка повертає інформацію загального виду по переданому студенту
 console.log('Інформацію загального виду: ' + getStudentInfo(0));
+
+// 4. Ствроіть функцію – яка повертає імена студентів у алфавітному порядку.
 console.log(studentsNames[0].name + ' , ' + studentsNames[1].name + ' , ' + studentsNames[2].name);
-// console.log(getBestStudent(students));
-console.log(calculateWordLetters('students'));
+
+// 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
+console.log(getBestStudent());
+
+// 6. Створіть функцію – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
+console.log(calculateWordLetters('Мені надоїло це кляте завдання!'));
 
 
 
