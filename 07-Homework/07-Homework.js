@@ -51,7 +51,7 @@ function getMySalary(country, salary, taxes, profit) {
             clearInterval(b.timer);
         }
         this.count++;
-    }, 1000)
+    }, 10000)
 
 }
 
