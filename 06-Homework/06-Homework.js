@@ -60,7 +60,6 @@ function getStudentInfo1(name, course, mark) {
 }
 
 
-
 // 4. Ствроіть функцію – яка повертає імена студентів у алфавітному порядку.
 studentsNames = JSON.parse(JSON.stringify(students));
 studentsNames.sort(function(a,b){

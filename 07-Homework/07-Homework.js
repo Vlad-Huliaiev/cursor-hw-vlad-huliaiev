@@ -32,26 +32,45 @@ function getTotalTaxes(country) {
 }
 
 
-// 4.   Створіть функцію getMySalary(country) – яка буде писати в консоль об'єкт виду: { salary: number, taxes: number, profit: number } кожні 10 секунд.
+// 4.   Створіть функцію – яка буде писати в консоль об'єкт виду: { salary: number, taxes: number, profit: number } кожні 10 секунд.
 //      Значення salary – генеруйте випадковим чином у діапазоні 1500-2000. taxes – розраховується в залежності від вибраної країни та значення salary.
 //      profit = salary - taxes;
-function getMySalary(country) {
-    
+function salaryTaxesProfit(country) {
+    let salary = +(Math.floor(Math.random() * (2000 - 1500)) + 1500);
+    let taxes = +(salary * country.tax).toFixed(2);
+    let profit = +(salary - taxes).toFixed(2);
+    let obj = {salary: salary, taxes: taxes, profit: profit};
+    return obj;
 }
 
-// 1. Створіть функцію – яка рахує скільки податків ви заплатите як IT-спеціаліст в якійсь з країн.
-let myTaxesInCountry = new getMyTaxes(ukraine, 1670);
+function getMySalary(country, salary, taxes, profit) {
+    this.count = 1;
+    this.timer = setInterval(() => {
+        console.log(new salaryTaxesProfit(ukraine));
+        if(this.count == 10) {
+            clearInterval(b.timer);
+        }
+        this.count++;
+    }, 1000)
+
+}
+
+
+// 1.   Створіть функцію – яка рахує скільки податків ви заплатите як IT-спеціаліст в якійсь з країн.
+let myTaxesInCountry = new getMyTaxes(ukraine, 1700);
 console.log('Taxes: ' + myTaxesInCountry.taxes);
 
-// 2. Створіть функцію – яка рахує скільки у середньому податків платятт IT-спеціалісти у кожній країні.
-console.log('Middle taxes in ukraine: ' + new getMiddleTaxes(ukraine).middleTaxes);
-console.log('Middle taxes in latvia: ' + new getMiddleTaxes(latvia).middleTaxes);
-console.log('Middle taxes in litva: ' + new getMiddleTaxes(litva).middleTaxes);
+// 2.   Створіть функцію – яка рахує скільки у середньому податків платятт IT-спеціалісти у кожній країні.
+console.log('Middle taxes in Ukraine: ' + new getMiddleTaxes(ukraine).middleTaxes);
+console.log('Middle taxes in Latvia: ' + new getMiddleTaxes(latvia).middleTaxes);
+console.log('Middle taxes in Litva: ' + new getMiddleTaxes(litva).middleTaxes);
 
-// 3. Створіть функцію  – яка рахує, скільки всього податків платять IT-спеціалісти у кожній країні.
-console.log('Total taxes in ukraine: ' + new getTotalTaxes(ukraine).totalTaxesInCountry);
-console.log('Total taxes in latvia: ' + new getTotalTaxes(latvia).totalTaxesInCountry);
-console.log('Total taxes in litva: ' + new getTotalTaxes(litva).totalTaxesInCountry);
+// 3.   Створіть функцію  – яка рахує, скільки всього податків платять IT-спеціалісти у кожній країні.
+console.log('Total taxes in Ukraine: ' + new getTotalTaxes(ukraine).totalTaxesInCountry);
+console.log('Total taxes in Latvia: ' + new getTotalTaxes(latvia).totalTaxesInCountry);
+console.log('Total taxes in Litva: ' + new getTotalTaxes(litva).totalTaxesInCountry);
 
-// 4.
-
+// 4.   Створіть функцію – яка буде писати в консоль об'єкт виду: { salary: number, taxes: number, profit: number } кожні 10 секунд.
+//      Значення salary – генеруйте випадковим чином у діапазоні 1500-2000. taxes – розраховується в залежності від вибраної країни та значення salary.
+//      profit = salary - taxes;
+var b = new getMySalary();
