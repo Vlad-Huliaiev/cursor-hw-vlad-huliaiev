@@ -50,9 +50,15 @@ function getStudentInfo(id) {
     name = students[id].name;
     course = students[id].course;
     mark = getAverageMark(id);
-    result = "name: " + name + ", " + "course: " + course + "," + " average mark: " + mark;
+    let result = "name: " + name + ", " + "course: " + course + "," + " average mark: " + mark;
     return  result;
 }
+function getStudentInfo1(name, course, mark) {
+    this.name = name;
+    this.course = course;
+    this.mark = mark;
+}
+
 
 
 // 4. Ствроіть функцію – яка повертає імена студентів у алфавітному порядку.
@@ -102,6 +108,8 @@ console.log('Середня сума: ' + getAverageMark(0));
 
 // 3. Створіть функцію – яка повертає інформацію загального виду по переданому студенту
 console.log('Інформацію загального виду: ' + getStudentInfo(0));
+console.log('Інформацію загального виду:');
+console.log(new getStudentInfo1(students[0].name, students[0].course, getAverageMark(0)));
 
 // 4. Ствроіть функцію – яка повертає імена студентів у алфавітному порядку.
 console.log(studentsNames[0].name + ' , ' + studentsNames[1].name + ' , ' + studentsNames[2].name);
