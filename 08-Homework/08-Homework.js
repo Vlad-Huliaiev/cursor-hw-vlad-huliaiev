@@ -39,12 +39,13 @@ class Student {
         }
     }
 
-
+// 6. Створіть метод this.dismiss, який "виключить" студента. Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна.
     getDismiss() {
         this.dismiss = true;
         return (student.getInfo() + '\r\n' + 'Оцінки студента: ' +  student.mark + '.' + '\r\n' + 'Середній бал ' + student.getAverageMark());
     }
-
+    
+// 7. Створіть метод this.recover, який дозволить поновити студента.
     getRecover() {
         this.dismiss = false;
         return console.log(`Студента ${this.course} ${this.university} ${this.fullName} було поновленно.`);
