@@ -60,9 +60,12 @@ student.getInfo();
 console.log('Оцінки студента:');
 console.log(student.mark);
 // 4. Створіть сеттер оцінок this.marks = 5, який дозволяє поставити оцінку студенту. Після того, як оцінка поставлена, геттер повинен повернути масив.
-console.log('Студент сдав ще один екзамен:');
-student.mark = 5;
-student.mark = 4;
+console.log('Студент сдав ще екзамени:');
+//student.mark = 4;
+//student.mark = 5;
+alert('Поставте оцінку за п`яти-бальною системою.');
+student.mark = +prompt('Поставте оінки студенту за 5 екзамен', '');
+//student.mark = +prompt('Поставте оінки студенту за 6 екзамен', '');
 console.log(student.mark);
 // 5. Створіть метод отримання середнього балу.
 console.log('Середній бал студента:');
@@ -78,3 +81,28 @@ console.log('Оцінки студента:');
 console.log(student.mark);
 console.log('Середній бал студента:');
 console.log(student.getAverageMark());
+
+console.log('\n');
+console.log('\n');
+console.log('ADVANCED');
+class BudgetStudent extends Student {
+    constructor( course, university, fullName ) {
+        super( course, university, fullName );
+            student.getAverageMark() > 4 ? this.noTuitionNoScholarship = false : this.noTuitionNoScholarship = true;
+            if(this.noTuitionNoScholarship === true) {
+                console.log('Студента було позбавленно стипендії!');
+            } else {
+                console.log(`Студент ${this.course} ${this.university} ${this.fullName}`);
+                this.count = 1;
+                this.timer = setInterval(() => {
+                    console.log(this.count + '. ' + 'Ви отримали 1400 грн. стипендії');
+                    if(this.count == 10) {
+                        clearInterval(budgetStudent.timer);
+                    }
+                    this.count++;
+                }, 30000);
+            }
+
+    }
+}
+const budgetStudent = new BudgetStudent( '6th year', 'Taras Shevchenko National University of Kyiv,', 'Daniel Faraday' );
