@@ -88,8 +88,7 @@ console.log('ADVANCED');
 class BudgetStudent extends Student {
     constructor( course, university, fullName ) {
         super( course, university, fullName );
-            student.getAverageMark(() => {this.averageSum = 4 ? this.noTuitionNoScholarship = false : this.noTuitionNoScholarship = true});
-            if(this.noTuitionNoScholarship === true) {
+            if(student.getAverageMark() < 4) {
                 console.log('Студента було позбавленно стипендії!');
             } else {
                 console.log(`Студент ${this.course} ${this.university} ${this.fullName}`);
@@ -100,7 +99,7 @@ class BudgetStudent extends Student {
                         clearInterval(budgetStudent.timer);
                     }
                     this.count++;
-                }, 30000);
+                }, 1000);
             }
 
     }
