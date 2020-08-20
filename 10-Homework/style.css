@@ -10,17 +10,27 @@ body,html {
     padding: 0;
     font-family: sans-serif;
 }
+.cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-top: Calc(50vh - 20vh);
+}
 
 .case {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
+    border: 4px solid black;
+    border-radius: 5px;
+    margin: auto;
+    height: 400px ;
+    width: 100px;
     font-size: 1.5rem;
     padding: 1rem .5rem;
     transition: all .07s ease;
-    width: 10rem;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
+
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    align-items: center;
+    justify-content: center;
 }
