@@ -99,7 +99,7 @@ class BudgetStudent extends Student {
                         clearInterval(budgetStudent.timer);
                     }
                     this.count++;
-                }, 1000);
+                }, 30000);
             }
 
     }
