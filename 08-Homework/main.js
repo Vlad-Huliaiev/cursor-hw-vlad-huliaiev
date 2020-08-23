@@ -35,7 +35,7 @@ class Student {
                 sum += this.marks[i];
             }
             this.averageSum = sum / this.marks.length;
-        return this.averageSum;
+        return this.averageSum.toFixed(2);
         }
     }
 
