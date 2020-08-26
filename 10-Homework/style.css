@@ -1,36 +1,114 @@
-
 html {
-    font-size: 10px;
-    background: bottom center;
-    background-size: cover;
+    background: url(./img/111.jpg) no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 }
 
-body,html {
+body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: cursive, arial, sans-serif;
+
 }
+
 .cases {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding-top: Calc(50vh - 20vh);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+h3 {
+    font-size: 20px;
+    font: cursive;
+    font-weight: bold;
+}
+span {
+    font-size: 30px;
+    font: arial;
+    font-variant: normal;
+    margin-top: 100%;
 }
 
 .case {
-    border: 4px solid black;
-    border-radius: 5px;
-    margin: auto;
-    height: 400px ;
-    width: 100px;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
+    background: #FFFFFF;
+      border: 2px solid #C0C0C0;
+      height: 410px;
+      width: 100px;
+      margin: 50px 0 0 50px;
+      overflow: hidden;
+      display: block;
+      text-align: center;
+      line-height: 38px;
+}
 
-    display: grid;
-    grid-template-rows: 150px 1fr;
-    align-items: center;
-    justify-content: center;
+#butQ, #butW, #butE, #butR, #butT, #butY, #butU, #butI {
+    /*Скруглення кутів*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    /*Градієнт*/
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+
+    /*Тінь*/
+    -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+
+    /*Перехід*/
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -o-transition: All 1s ease;
+    -ms-transition: All 1s ease;
+    transition: All 1s ease;
+
+
+}
+div#butQ:active {
+  background-color: #DC143C;
+}
+
+
+#butQ:hover {
+  background-color: #DC143C;
+}
+
+#butW:hover {
+  background-color: #FF8C00;
+}
+
+#butE:hover {
+  background-color: #FFFF00;
+}
+
+#butR:hover {
+  background-color: #008000;
+}
+
+#butT:hover {
+  background-color: #00FFFF;
+}
+
+#butY:hover {
+  background-color: #00008B;
+}
+
+#butU:hover {
+  background-color: #483D8B;
+}
+
+#butI:hover {
+  background-color: #C0C0C0;
 }

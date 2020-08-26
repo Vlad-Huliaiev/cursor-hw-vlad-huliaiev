@@ -2,6 +2,8 @@ const audio = new Audio();
 const casesDiv = document.getElementsByClassName('case');
 const sounds = document.querySelectorAll("audio");
 
+
+
 [...casesDiv].forEach( function(item) {
     item.addEventListener('click', function() {
         const nameAudio = item.querySelector('audio').getAttribute('src');
@@ -16,7 +18,10 @@ document.addEventListener('keydown', function(event) {
     sounds.forEach(audio => {
         if(audio.id === event.key){
             sound = audio;
+
         }
     })
-    sound && sound.play()
+    sound.play();
 });
+
+
