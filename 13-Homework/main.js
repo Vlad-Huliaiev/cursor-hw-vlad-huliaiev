@@ -1,31 +1,30 @@
-function * newFontGenerator(start = 2, end = 100, step = 2) {
-    let range = 0;
-    for (let i = start; i < end; i += step) {
-        range += step;
-        yield range;
-    }
-}
-
-const fontGenerator = newFontGenerator();
-
-
-for (let i = 0; i < 10; i++) {
-  console.log("fontGenerator.next().value -> " + fontGenerator.next().value);
-}
-
-function generateFont(){
-    let font = document.getElementByClass('.text');
-    for (var i = 0; i < font.length; i++) {
-                font[i].onclick=(function (Obj){
-                    return function (){
-                        Obj.style.fontSize = fontGenerator.next().value;
-                    };
-                })(font[i]);
-            };
-}
-
+//function * newFontGenerator(start) {
+//    for (let i = start; i < 100; i -= 2) {
+//        start += i;
+//        yield i;
+//    }
+//}
+//const fontGenerator = newFontGenerator(14);
+//console.log("fontGenerator.next().value -> " + fontGenerator.next().value);
+//console.log("fontGenerator.next().value -> " + fontGenerator.next().value);
+//console.log("fontGenerator.next().value -> " + fontGenerator.next().value);
+//console.log("fontGenerator.next().value -> " + fontGenerator.next().value);
 //
-//window.onload=function (){
+
+
+//function generateFont(){
+//    let font = document.getElementByClass('.text');
+//    for (var i = 0; i < font.length; i++) {
+//                font[i].onclick=(function (Obj){
+//                    return function (){
+//                        Obj.style.fontSize = fontGenerator.next().value;
+//                    };
+//                })(font[i]);
+//            };
+//}
+//
+////
+////window.onload=function (){
 //     (function (tag_name){
 //     var toggle_fs=function() {
 //         if(this.dataset.org_font) {
