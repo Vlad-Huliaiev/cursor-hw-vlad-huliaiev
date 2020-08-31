@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework #12</title>
+    <link rel="stylesheet" href="./test/test.css"/>
+</head>
+<body>
+<div>
+    <form name="createUser">
+        <label>
+            Name
+            <input type="text" name="name">
+        </label>
+        <label>
+            Email
+            <input type="text" name="email">
+        </label>
+        <button type="button" id="create">create</button>
+    </form>
+</div>
+
+<div>
+    <button id="prev">prev</button>
+    <button id="next">next</button>
+    <button id="displaySaved">display saved</button>
+</div>
+    <div class="users"></div>
+
+
+    <div class="details">
+        <div class="details__content"></div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./test/test.js"></script>
+</body>
+</html>
