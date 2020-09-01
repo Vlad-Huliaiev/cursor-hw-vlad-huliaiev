@@ -1,4 +1,4 @@
-<!doctype html>.
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,21 +8,24 @@
     <title>Homework #13</title>
 </head>
 <body>
+<h1>Homework #13</h1>
+<div>
     <div class="generator">
-        <h2>Generator</h2>
         <div>
-            <button  href="#" id="btn" class="gen_btn">Generate</button>
+            <button  href="#" id="btn" class="gen_btn">+</button>
         </div>
         <p class="out"></p>
     </div>
-<!--    <div class="font_gen">-->
-<!--        <h2>Font</h2>-->
-<!--        <div>-->
-<!--            <button  href="#" id="btn_up" class="gen_btn">Increase</button>-->
-<!--            <button  href="#" id="btn_down" class="gen_btn">Reduce</button>-->
-<!--        </div>-->
-<!--    </div>-->
-<script src="./index.js"></script>
-<!--<script src="./main.js"></script>-->
+    <div class="font_generator">
+        <h2>Реклама</h2>
+        <div>
+            <button id="up" type="button" onclick="renderFontUp()" class="gen_btn">Збільшити</button>
+            <button id="down" type="button" onclick="renderFontDown()" class="gen_btn">Зменьшити</button>
+        </div>
+        <p href="#" id="fonts">Тут могла бути ваша реклама!</p>
+    </div>
+</div>
+<script src="./app/generator.js"></script>
+<script src="./app/fonts_generator.js"></script>
 </body>
 </html>

@@ -1,6 +1,4 @@
 const container = document.querySelector('.generator');
-const idGen = document.querySelector('.text');
-const outText = document.querySelector('.gen_btn');
 const output = document.querySelector('.out');
 
 function * createIdGenerator() {
