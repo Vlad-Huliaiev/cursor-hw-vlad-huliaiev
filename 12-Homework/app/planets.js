@@ -1,26 +1,4 @@
-const BASE = 'http://swapi.dev/api/';
-
-async function getFilm(films) {
-    const filmsNumb = await fetch.json();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const BASE = 'https://swapi.dev/api/';
 /*
  *   Planets
  */
@@ -56,11 +34,11 @@ function renderPlanets(planets) {
         iElement.className = 'planet';
         iElement.innerHTML = `
             <h3>${i.name}</h3>
-            <div>
-                <p class="climate_text">Climate:</p>
-                <p class="climate">${i.climate}</p>
-                <p class="diameter_text">Diameter:</p>
-                <p class="diameter">${i.diameter}</p>
+            <div class="planets_data">
+                <p>Orbital period: ${i.orbital_period} day</p>
+                <p>Diameter: ${i.diameter} km</p>
+                <p>Terrain: ${i.terrain}</p>
+                <p>Population: ${i.population} humanoids</p>
             </div>
         `;
         container.append(iElement);
@@ -81,10 +59,6 @@ function paginationInit() {
             getPlanets(++currentPage).then(renderPlanets);
         });
 }
-/*
- *  Films
- */
-
 
 paginationInit();
 getPlanets().then(renderPlanets);
