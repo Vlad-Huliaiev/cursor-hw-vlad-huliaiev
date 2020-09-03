@@ -18,4 +18,5 @@ async function getRandomChinese(length){
         const date2 = Date.now();
     console.log(strArr + ' - ' + (date2 - date1) + 'ms');
 }
+console.log("Homework #11: ");
 getRandomChinese(6);
