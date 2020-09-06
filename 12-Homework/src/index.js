@@ -96,8 +96,8 @@ function renderPersons(users) {
     container.innerHTML = '';
     document.getElementById('planet').innerHTML = "";
 
-    users.forEach( async i => {
-        i = i.replace(/^http:\/\//i, 'https://');
+    users.forEach( async character => {
+        const i = character.replace(/^http:\/\//i, 'https://');
 
         const personI = await axios.get(i);
 
