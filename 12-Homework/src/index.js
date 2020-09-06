@@ -1,4 +1,4 @@
-const BASE = 'http://swapi.dev/api/';
+const BASE = 'https://swapi.dev/api/';
 /*
  *   Planets
  */
