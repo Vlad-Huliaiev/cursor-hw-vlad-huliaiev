@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'starjout';
+	src: url('font/starjout.eot');
+	src: local('☺'), url('font/starjout.woff') format('woff'),
+	url('font/starjout.ttf') format('truetype'),
+	url('font/starjout.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    font-family: starjout;
+    background-image:  url('img/star.jpg');
+    background-size: 100%;
+}
+
+.main-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#person, #planet {
+    color: #fbe122;
+}
+
+#person {
+    display: grid;
+    grid-template-columns:  auto auto auto;
+    justify-content: space-evenly;
+    justify-items: stretch;
+    margin-top: 40px;
+}
+
+#planet {
+    display: grid;
+    grid-template-columns:  auto auto;
+    justify-content: space-evenly;
+    justify-items: stretch;
+    font-size: 20px;
+}
+
+.button_click {
+    background: #FFFFFF;
+    border: 2px solid #fbe122;
+    height: 40px;
+    width: 125px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: starjout;
+}
+
+#renderPerson:hover {
+  background-color: #310ee3;
+}
+
+#renderPlanet:hover {
+  background-color: #fac107;
+}
+
+#previous:hover {
+  background-color: #008000;
+}
+
+#further:hover {
+  background-color: #008000;
+}

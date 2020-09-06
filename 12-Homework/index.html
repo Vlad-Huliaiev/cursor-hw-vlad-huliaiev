@@ -10,25 +10,25 @@
 <body>
 
 
-<div class="planets_container">
-    <div class="planets"></div>
-    <div class="planets-btn">
-        <button id="previous" class="button">Previous</button>
-        <button id="further" class="button">Further</button>
+<div class="wrapper">
+    <div class="main-button">
+        <button id="renderPerson" class="button_click">Person</button>
+        <button id="renderPlanet" class="button_click">Planet</button>
+        <button id="previous" class="button_click">Previous</button>
+        <button id="further" class="button_click">Further</button>
     </div>
-</div>
 
-
-<div class="persons_container">
-    <div class="persons"></div>
-    <div class="persons-btn">
-        <button id="next" class="button">Next</button>
+    <div class="persons_container">
+        <div id="person" class="persons"></div>
     </div>
-</div>
 
+    <div class="planets_container">
+        <div id="planet" class="planets"></div>
+    </div>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./app/planets.js"></script>
-<script src="./app/person.js"></script>
+<script src="./src/index.js"></script>
 </body>
 </html>
