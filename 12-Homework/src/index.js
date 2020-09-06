@@ -9,7 +9,7 @@ document.getElementById("renderPlanet").addEventListener("click", () => {
 function getPlanets(page) {
     const config = {
         method: 'GET',
-        url: `${BASE}planets/`,
+        url: `https://swapi.dev/api/planets/`,
         params: {
             page: page
         }
@@ -83,7 +83,6 @@ function getPersons() {
         };
 
     return axios(config).then((res) => {
-    console.log(res.data.characters);
         return res.data.characters;
         }).catch(() => {
                 console.dir('Trouble');
