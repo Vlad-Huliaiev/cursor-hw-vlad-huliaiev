@@ -9,7 +9,7 @@ document.getElementById("renderPlanet").addEventListener("click", () => {
 function getPlanets(page) {
     const config = {
         method: 'GET',
-        url: `https://swapi.dev/api/planets/`,
+        url: `${BASE}planets/`,
         params: {
             page: page
         }
