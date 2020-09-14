@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/cursor-hw-vlad-huliaiev/static/css/main.695b2db4.chunk.css",
+    "main.js": "/cursor-hw-vlad-huliaiev/static/js/main.073a7211.chunk.js",
+    "main.js.map": "/cursor-hw-vlad-huliaiev/static/js/main.073a7211.chunk.js.map",
+    "runtime-main.js": "/cursor-hw-vlad-huliaiev/static/js/runtime-main.1e07d3d8.js",
+    "runtime-main.js.map": "/cursor-hw-vlad-huliaiev/static/js/runtime-main.1e07d3d8.js.map",
+    "static/js/2.dd3ed177.chunk.js": "/cursor-hw-vlad-huliaiev/static/js/2.dd3ed177.chunk.js",
+    "static/js/2.dd3ed177.chunk.js.map": "/cursor-hw-vlad-huliaiev/static/js/2.dd3ed177.chunk.js.map",
+    "index.html": "/cursor-hw-vlad-huliaiev/index.html",
+    "precache-manifest.2abfd642efa2db95915790ed5f7575dc.js": "/cursor-hw-vlad-huliaiev/precache-manifest.2abfd642efa2db95915790ed5f7575dc.js",
+    "service-worker.js": "/cursor-hw-vlad-huliaiev/service-worker.js",
+    "static/css/main.695b2db4.chunk.css.map": "/cursor-hw-vlad-huliaiev/static/css/main.695b2db4.chunk.css.map",
+    "static/js/2.dd3ed177.chunk.js.LICENSE.txt": "/cursor-hw-vlad-huliaiev/static/js/2.dd3ed177.chunk.js.LICENSE.txt",
+    "static/media/anakin_img.jpg": "/cursor-hw-vlad-huliaiev/static/media/anakin_img.18867fcd.jpg",
+    "static/media/index.css": "/cursor-hw-vlad-huliaiev/static/media/background.5b072750.jpg",
+    "static/media/leia_img.jpg": "/cursor-hw-vlad-huliaiev/static/media/leia_img.3352fdeb.jpg",
+    "static/media/luke_img.jpg": "/cursor-hw-vlad-huliaiev/static/media/luke_img.55da1bf0.jpg",
+    "static/media/palpatine.jpg": "/cursor-hw-vlad-huliaiev/static/media/palpatine.40b50c9e.jpg",
+    "static/media/rey_avatar.jpg": "/cursor-hw-vlad-huliaiev/static/media/rey_avatar.22de823b.jpg",
+    "static/media/rey_img.jpg": "/cursor-hw-vlad-huliaiev/static/media/rey_img.50847147.jpg",
+    "static/media/rey_img_2.jpg": "/cursor-hw-vlad-huliaiev/static/media/rey_img_2.71852408.jpg",
+    "static/media/rey_img_3.jpg": "/cursor-hw-vlad-huliaiev/static/media/rey_img_3.28584aa0.jpg",
+    "static/media/tick1.png": "/cursor-hw-vlad-huliaiev/static/media/tick1.9febcbf7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e07d3d8.js",
+    "static/js/2.dd3ed177.chunk.js",
+    "static/css/main.695b2db4.chunk.css",
+    "static/js/main.073a7211.chunk.js"
+  ]
+}
