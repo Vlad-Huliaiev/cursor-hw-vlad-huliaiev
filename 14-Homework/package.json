@@ -1,11 +1,12 @@
 {
-  "name": "cursor-hw-vlad-huliaiev",
+  "name": "14-homework",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack --watch"
+    "build-dev": "webpack --mode=development",
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -13,15 +14,17 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Vlad-Huliaiev/cursor-hw-vlad-huliaiev/issues"
-  },
-  "homepage": "https://github.com/Vlad-Huliaiev/cursor-hw-vlad-huliaiev#readme",
   "dependencies": {
     "axios": "^0.20.0"
   },
   "devDependencies": {
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

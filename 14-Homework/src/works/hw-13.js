@@ -1,4 +1,4 @@
-const container = document.querySelector('.generator');
+const container = document.getElementById('hw13');
 const output = document.querySelector('.out');
 
 function * createIdGenerator() {

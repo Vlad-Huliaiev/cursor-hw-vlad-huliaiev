@@ -15,16 +15,13 @@ function generateBlocks() {
 
 generateBlocks();
 
-
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 function generateColor(color) {
     color.style.background = 'rgb('+getRandomInt(0,255)+', '+getRandomInt(0,255)+', '+getRandomInt(0,255)+')';
 }
-
 
 function generateBlocksInterval(color) {
     timer = setInterval(() => generateColor(color), 1000);

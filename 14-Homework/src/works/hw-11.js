@@ -1,8 +1,7 @@
-
 function prom() {
     return new Promise(function(resolve, reject) {
     setTimeout(() => {
-        str = String.fromCharCode(Date.now() % 100000);
+        let str = String.fromCharCode(Date.now() % 100000);
         resolve(str);
     }, 50);
 });
@@ -16,7 +15,12 @@ async function getRandomChinese(length){
             strArr += await prom();
         }
         const date2 = Date.now();
-    console.log(strArr + ' - ' + (date2 - date1) + 'ms');
+    console.log('Task 11: ' + strArr + ' - ' + (date2 - date1) + 'ms');
 }
-console.log("Homework #11: ");
-getRandomChinese(6);
+
+
+const chinese = getRandomChinese(6);
+
+const container = document.getElementById('hw11');
+export default container.innerHTML = `<h3>Task - 11</h3>
+<span>В консолі</span>`;
